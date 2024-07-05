@@ -1,0 +1,47 @@
+﻿<Window x:Class="ProcessTerminator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Project Diablo II Quitter by fl4te" Height="300" Width="400"
+        Background="#2E2E2E" Foreground="#FFFFFF"
+        KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#3C3F41"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#555555"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#3C3F41"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#555555"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="10,5"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Please make sure you run this tool as administrator" FontFamily="Cascadia Code" FontSize="10"/>
+            <TextBlock Text="or else quitting the process may fail." FontFamily="Cascadia Code" FontSize="10"/>
+            <Button Content="Re-Scan for Project Diablo II Process" Click="ScanButton_Click" FontFamily="Cascadia Code" FontSize="12"/>
+            <TextBlock Text="Press the button and then press the key to quit the process:" FontFamily="Cascadia Code" FontSize="10"/>
+            <Button Content="Set Quit Key" Click="SetQuitKeyButton_Click" FontFamily="Cascadia Code" FontSize="12"/>
+            <TextBlock x:Name="SelectedKeyTextBlock" Text="Selected Key: None" FontFamily="Cascadia Code" FontSize="10"/>
+            <Button Content="Start" Click="StartButton_Click" FontFamily="Cascadia Code" FontSize="12"/>
+            <TextBlock FontFamily="Cascadia Code" FontSize="10">           
+                <Hyperlink NavigateUri="https://github.com/fl4te/project-diablo-ii-quitter" RequestNavigate="Hyperlink_RequestNavigate">
+                    Browse Source Code
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
