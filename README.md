@@ -1,6 +1,8 @@
 # Project Diablo II Quitter
 A small tool written in C# to instantly terminate the Project Diablo II process to rescue your HC character when in danger.
 
+![](https://i.ibb.co/L9PdtFd/pd2-quitter.png)
+
 Note: **Needs to be run with administrator privileges.**
 
 Main Features:
